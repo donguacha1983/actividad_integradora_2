@@ -31,23 +31,24 @@ class DatabaseHelper {
         fotoPerfil TEXT
       )
     ''');
-    Future<int> insertUsuario(Usuario usuario) async {
-      Database db = await database;
-      return await db.insert('usuarios', usuario.toMap());
-    }
+  }
 
-    Future<Usuario?> getUltimoUsuario() async {
-      Database db = await database;
-      List<Map<String, dynamic>> maps = await db.query(
-        'usuarios',
-        orderBy: 'id DESC',
-        limit: 1,
-      );
+  Future<int> insertUsuario(Usuario usuario) async {
+    Database db = await database;
+    return await db.insert('usuarios', usuario.toMap());
+  }
 
-      if (maps.isNotEmpty) {
-        return Usuario.fromMap(maps.first);
-      }
-      return null;
+  Future<Usuario?> getUltimoUsuario() async {
+    Database db = await database;
+    List<Map<String, dynamic>> maps = await db.query(
+      'usuarios',
+      orderBy: 'id DESC',
+      limit: 1,
+    );
+
+    if (maps.isNotEmpty) {
+      return Usuario.fromMap(maps.first);
     }
+    return null;
   }
 }
