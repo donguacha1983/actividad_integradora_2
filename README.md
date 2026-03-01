@@ -36,10 +36,13 @@ La app crea una base de datos local llamada `usuarios.db` en el almacenamiento i
 
 ## Capturas de pantalla
 
-![Formulario de registro](docs/images/registro.png)
+![Formulario de registro](lib\docs\registro.png)![alt text](registro.png)
 *Pantalla de registro con campos validados y botón para seleccionar imagen.*
 
-![Perfil del usuario](docs/images/perfil.png)
+![MENSAJE DE REGISTRO EXITOSO](lib\docs\REGISTRO EXITOSO.png)![alt text](registro exitoso.png) ![alt text](<REGISTRO EXITOSO.png>)
+*notificacion de registro exitoso*
+
+![Perfil del usuario](lib\docs\perfil.png)![alt text](perfil.png)
 *Visualización del último usuario registrado con avatar y tarjetas.*
 
 ## Estructura del proyecto
@@ -64,16 +67,4 @@ docs/
 android/ios/...               # configuraciones de plataforma
 ```
 
-## GitHub y commits
-
-El repositorio contiene múltiples commits progresivos y usa las ramas `main` y `feature/sqlite`. Los cambios clave incluyen:
-
-- `feat: modelo Usuario y base de datos SQLite básica`
-- `feat: widgets reutilizables y validaciones`
-- `feat: pantalla de registro con formulario completo`
-- `feat: pantalla de perfil con visualización de datos`
-- `perf: optimización de consultas SQLite con índices` (rama `feature/sqlite`)
-- `docs: documentación técnica de SQLite` (rama `feature/sqlite`)
-
 ---
-*Este README ha sido actualizado para cumplir los requisitos del enunciado.*
